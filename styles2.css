@@ -1,0 +1,285 @@
+
+body {
+    margin: 0;
+    height: 100vh; /* Full viewport height - Important*/
+    max-height: 100vh;
+    background-color: #56585D;
+    display: flex;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(241, 241, 241, 0); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(176, 176, 176, 0.2);
+    border-end-end-radius: 10px;
+    border-start-end-radius: 10px;
+    width: 6px;
+    height: 5px;
+    padding-left: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    padding: 13px;
+    /* box-sizing: border-box; */
+    flex: 1;
+    background-image: url(images/milkyway.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.halves {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    /* border-radius: 8px;  */
+    gap: 13px;
+    max-height: 50vh;
+    overflow-y: auto;
+    /* flex-wrap: wrap; */
+}
+
+.top-boxes {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    /* padding: 13px; */
+    /* padding-left: 15px; */
+    /* padding-bottom: 24px; */
+}
+
+.small{
+    flex: 3;
+}
+.large{
+    flex: 4;
+}
+
+.bottom {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    /* gap: 6px; */
+    /* border: 1px solid #e2e2e2; */
+    align-items: center;
+    padding: 0 4px;
+}
+
+h4 {
+    color: #e2e2e2; /* Text color, change as needed */
+    font-family: 'Segoe UI Semibold', sans-serif;
+    font-size: 0.9em;
+    margin: 0;
+    flex: 1;
+    /* border: 1px solid #e2e2e2; */
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    padding: 12px;
+}
+
+.current-task {
+    flex: 1;
+
+    /* border: 1px solid #e2e2e2; */
+}
+
+.task-list {
+    flex:3;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 6px 12px 20px;
+    gap: 12px;
+    /* border-radius: 20px; */
+    /* box-shadow: inset 0px 2px 6px rgb(0, 0, 0); */
+    /* border: 1px solid #e2e2e2; */
+}
+
+.task{
+    display: flex;
+    gap: 0px;
+    padding: 0;
+    border-radius: 10px;
+    background-color: rgba(120, 120, 120, 0.1);
+    flex-direction: column;
+}
+
+.task-content {
+    display: flex;
+}
+
+
+.task-details {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.2s ease-out; /* Adjust timing and easing as desired */
+    padding: 0 30px 0 50px;
+}
+
+.task-details > p {
+    color: #fff;
+    font-family: 'Segoe UI Semilight', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+
+.task-content > h4 {
+    overflow: auto;
+}
+
+.hours {
+    display: flex;
+    /* border: 1px solid #e2e2e2; */
+
+}
+
+.hours > h4 {
+    justify-content: center;
+    min-width: fit-content;
+}
+
+.hours > h4 + h4 {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.clock-container {
+    margin: 0;
+    width: 500px;
+    /* border: 1px solid rgb(255, 255, 255, 0.1); */
+    align-self: center;
+    flex: 2;
+    display: flex;
+    align-items: center; /* Vertically centers the text */
+    justify-content: center;
+    /* padding: 8px; */
+}
+
+#clock {
+    padding: 10px;
+    color: rgba(178, 178, 178, 0.1); /* Text color, change as needed */
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 7em;
+    margin: 0;
+    /* border: 1px solid rgb(255, 255, 255, 0.1); */
+    /* max-width: fit-content; */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: .4px rgba(255, 255, 255, 0.4);
+}
+
+#time-snap-buttons {
+    /* height: 80px; */
+    margin: auto;
+    /* border: 1px solid rgb(255, 255, 255, 0.1); */
+    display: flex;
+    /* flex: 1; */
+    gap: 20px;
+    padding: 0px;
+    padding-bottom: 50px;
+}
+
+
+
+/* buttons styling from here */
+
+button {
+    /* height: 18px;
+    width: 18px; */
+    padding: 14px;
+    border: 1px solid rgb(255, 255, 255, 0);
+    border-radius: 50px;
+    /* height: 43px;
+    width: 43px; */
+    background-color: rgba(45, 45, 45, 0);
+    /* box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2), inset 0px 3px 4px rgba(75, 75, 75, 0.1); */
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center;
+}
+
+button:hover {
+    /* border: 1px solid rgb(255, 255, 255, 0.05); */
+    /* box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15); */
+    background-color: rgba(150, 150, 150, 0.1);
+    cursor: pointer;
+}
+
+button:focus {
+    /* border: 1px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), inset 0px 2px 6px rgba(255, 255, 255, 0.1);
+    background-color: rgba(150, 150, 150, 0.1); */
+    outline: none;
+}
+
+button > img {
+    height: 18px;
+    width: auto;
+}
+
+.click-icon {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+
+/* buttons in tasks are below */
+
+.task-icon {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    height: auto;
+    /* transition: flex-grow 0.5s ease; */
+}
+
+.task-icon:hover {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.task-content > .task-play {
+    border-radius: 0;
+}
+
+.task-content > .task-delete {
+    border-radius: 0 10px 10px 0;
+}
+
+.task-content > .details-toggle {
+    border-radius: 0;
+}
+
+
+
+/* glassmorphix from here */
+
+.glass {
+    background-color: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.5);
+    border: #333 solid 1px;
+}

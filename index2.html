@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Study Plan System</title>
+        <link rel="stylesheet" href="styles2.css" />
+    </head>
+    <body>
+        <div class="container">
+        <div class="top halves">
+            <div class="top-boxes small glass tasks">
+                <header>
+                    <h4>Tasks</h4>
+                    <button class="click-icon">
+                        <img src="images/plus_large_icon.svg" alt="Add tasks Icon" aria-label="Add Task">                        
+                    </button>
+                </header>
+                <article class="task-list">
+                    <!-- all the tasks are constructed in this element in script -->
+                </article>
+            </div>
+            <div class="top-boxes large glass ticker">
+                <header>
+                    <h4 id="clock-heading">Ticker</h4>
+                    <!-- <button class="click-icon">
+                        <img src="images/edit_icon.svg" alt="Edit Icon">                        
+                    </button> -->
+                </header>
+                <article class="clock-container">
+                    <div id="clock"></div>
+                </article>
+                <footer id="time-snap-buttons">
+                    <button title="sleep">
+                        <img src="images/moon_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button>
+                    <!-- <button>
+                        <img src="images/snooZZZe_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button> -->
+                    <button title="woke up">
+                        <img src="images/sun_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button>
+                    <button title="start" id="startPauseBtn">
+                        <img src="images/play_icon.svg" style="padding-left: 1px;" alt="Play Icon">
+                    </button>
+                    <button title="restart">
+                        <img src="images/refresh_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button>
+                    <button title="start 10 minutes">
+                        <img src="images/stopwatch_10_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button>
+                    <button title="distracted">
+                        <img src="images/clock_xmark_icon.svg" style="padding-left: 0px;" alt="Play Icon">
+                    </button>
+                </footer>
+            </div>
+            <div class="top-boxes small glass profile">
+                <header>
+                    <!-- <img class="logo-icon" src="images/profile_icon.svg" alt="Profile Icon"> -->
+                    <h4>Your</h4>
+                    <button class="click-icon">
+                        <img src="images/gear_settings.svg" alt="Edit Icon" aria-label="Edit Your Profile">                        
+                    </button>
+                </header>
+            <!-- <div class="timer"></div> -->
+            </div>
+        </div>
+
+
+
+        <div class="bottom halves glass" style="flex-direction: column;">
+           
+        </div>
+    </div>
+    <script src="tasks.js"></script>
+    <script src="script2.js"></script>
+    </body>
+</html>
+
+<!-- <div class="controls">
+                    <button id="playPauseBtn" class="play-pause-btn">
+                        <div id="icon" class="icon play-icon"></div>
+                    </button>
+                    <div id="reset">
+
+                    </div>
+                </div> -->
